@@ -1,0 +1,18 @@
+import random
+
+def crack_wifi_password():
+    target_network = "MyNeighbourhoodWiFi"
+    password_list = ["123456", "password", "qwerty", "letmein", "admin"]
+    
+    while True:
+        try_password = random.choice(password_list)
+        print(f"Trying password '{try_password}' for network '{target_network}'...")
+        
+        if try_password == "correctpassword":
+            print("Success! WiFi network cracked!")
+            break
+        else:
+            print("Password failed. Trying another...")
+            
+if __name__ == "__main__":
+    crack_wifi_password()
